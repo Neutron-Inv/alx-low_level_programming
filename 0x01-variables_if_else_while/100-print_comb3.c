@@ -6,26 +6,26 @@
  *return: Always 0 (Success)
  */
 
-int main(void)
-{
-  int unit;
-  int tenth;
+ int main(void)
+ {
+   int unit;
+   int tenth;
 
-  for (tenth = '0'; tenth <= 9; tenth++)
-    {
-      for (unit =(tenth + 1); unit <= 9; unit++)
-	{
-	  putchar(tenth);
-	    putchar(unit);
+   for (tenth = '0'; tenth <= 9; tenth++)
+     {
+       for (unit =(tenth + 1); unit <= 9; unit++)
+	 {
+	   putchar(tenth);
+	   putchar(unit);
 
-	    if (tenth != '8' || unit != '9')
-	      {
-		putchar(',');
-		putchar(' ');
-	       }
-	}
-    }
-  putchar('\n');
+	   if (tenth != '8' || unit != '9')
+	     {
+	       putchar(',');
+	       putchar(' ');
+	     }
+	 }
+     }
+   putchar('\n');
 
-  return (0);
-}
+   return (0);
+ }
