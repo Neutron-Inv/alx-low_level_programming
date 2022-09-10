@@ -1,4 +1,4 @@
-#include <stdio.h>
+3ed#include <stdio.h>
 
 /**
  *main - print all combinations of two units i.e 00-99
@@ -20,8 +20,8 @@ int main(void)
 
 	    if (tenth != '8' || unit != '9')
 	      {
-		putchar(',');
-		putchar(' ');
+		putchar(',')
+		  putchar(' ')
 	       }
 	}
     }
