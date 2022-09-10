@@ -33,7 +33,7 @@ putchar(',');
 putchar(' ');
 
 }
-      
+
 }
 putchar('\n');
 
