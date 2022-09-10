@@ -17,7 +17,7 @@ n++;
 }
 
 while (remaining <= 'f') /*print a-f for the remaining*/
-{     
+{
 putchar(remaining);
 remaining++;
 }
