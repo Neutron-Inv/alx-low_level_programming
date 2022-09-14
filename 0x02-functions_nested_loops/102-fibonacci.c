@@ -12,7 +12,7 @@ int main(void)
 {
 long int a, b, c;
 long int i;
-int ;
+int end;
 a = 0;
 b = 1;
 c = 1;
