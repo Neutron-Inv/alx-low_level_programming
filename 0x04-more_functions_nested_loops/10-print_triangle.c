@@ -1,30 +1,27 @@
 #include "main.h"
+
 /**
-  * print_triangle - draws a diagonal line
-  * @size: that's the length of the triangle
-  * Return: void                                               
-  */
+ * print_triangle - print traingle with #'s with given size
+ * @size: size of triangle to draw
+ */
+
 void print_triangle(int size)
 {
-int x;
-int y;
-int z;
+int height;
+int width;
+int draw;
 
-if (size > 0)
+if (size <= 0)
+_putchar('\n');
+
+for (height = 1; height <= size; height++)
 {
-for (x = 1; x <= size; x++)
-{
-for (y = size; y > x; y--)
-{
+for (width = 1; width <= (size - height); width++)
 _putchar(' ');
-}
-for (z = 0; z < x; z++)
-{
+
+for (draw = 1; draw <= height; draw++)
 _putchar('#');
-}
+
 _putchar('\n');
 }
-}
-else if (size <= 0)
-_putchar('\n');
 }
