@@ -21,7 +21,6 @@ half = len / 2;
 while (half--)
 {
 temp = s[len - i - 1];
-s[len - i - 1] = s[i];
 s[i] = temp;
 i++;
 }
