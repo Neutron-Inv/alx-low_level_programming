@@ -1,62 +1,60 @@
 #include "main.h"
-
 /**
- * infinite_add - add 2 integers.
- * @n1: integer
- * @n2: integer
- * @r: buffer
- * size_r: size of r
- * Return: char
- */
-
-int _atoi(char *s)
-{
-int sign = 1, resp = 0, firstNum;
-
-for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
-{
-if (s[firstNum] == '-')
-{
-sign *= -1;
-}
-}
-
-for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
-{
-resp *= 10;
-resp += (s[i] - 48);
-}
-
-return (sign * resp);
-}
-
-void int_to_string(int n)
-{
-int divisor = 1, i, resp;
-
-
-for (i = 0; n / divisor > 9; i++)
-{
-divisor *= 10;
-}
-
-char str[i];
-
-for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
-{
-resp = n / divisor;
-str[cmpt] = '0' + resp;
-n = n - resp * divisor;
-}
-str[i] = ('0' + n);
-}
-
-
+  * infinite_add - add two numbers
+  * @n1: first number
+  * @n2: second number
+  * @r: the buffer
+  * @size_r: the size of r
+  * Return: char
+  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int sum, a, b;
-a = _atoi(n1);
-b = _atoi(n2);
 
-sum = a + b;
+int i = 0;
+int j = 0;
+int count = 0;
+int digit = 0;
+unsigned int digitval;
+unsigned int value1 = 0;
+unsigned int value2 = 0;
+unsigned int value3 = 0;
+char *p = r;
+
+while (n1[i + 1])
+{
+n1++;
+i++;
+}
+while (i)
+{
+value1 += n1[i] - '0';
+i--;
+}
+while (n2[j + 1])
+{
+n2++;
+j++;
+}
+while (j)
+{
+value2 += n2[j - '0'];
+j--;
+}
+value3 = value1 + value2;
+digitval = value3;
+while (digitval / 10)
+{
+count += 1;
+digitval /= 10;
+}
+count += 1;
+if (count > size_r)
+return (0);
+for (; count; count--)
+{
+digit = (value3 % 10);
+value3 = (value3 - digit);
+r[count] = digit + '0';
+}
+return (p);
 }
