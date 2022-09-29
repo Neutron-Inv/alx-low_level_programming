@@ -1,1 +1,1 @@
- New Task for the Week
+New Task
