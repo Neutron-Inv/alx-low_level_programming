@@ -35,12 +35,12 @@ return (p);
   */
 void mult(int *product, char *n1, char *n2, int len1, int len2)
 {
-	/* declarations */
+/* declarations */
 int i;
 int j;
 int f1, f2;
 int sum;
-	/* the long math */
+/* the long math */
 for (i = len1 - 1; i >= 0; i--)
 {
 sum = 0;
