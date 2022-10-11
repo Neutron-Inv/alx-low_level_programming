@@ -8,7 +8,7 @@
  * @owner: character string
  */
 
-typeof struct dog
+typedef struct dog
 {
 char *name
 float age
